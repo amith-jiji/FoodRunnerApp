@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.internshala.FoodRunnerApp.activity.CartActivity">
+
+        <include
+            android:id="@+id/toolbarCart"
+            layout="@layout/toolbar"/>
+
+        <TextView
+            android:id="@+id/txtmenu"
+            android:layout_below="@id/toolbarCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ordering From : "
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/txtResName"
+            android:layout_below="@id/toolbarCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/txtmenu"
+            android:text="Bacco Bell"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:textColor="#000000"/>
+
+        <View
+            android:id="@+id/imgline"
+            android:layout_below="@id/txtmenu"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDark"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="7dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerCart"
+            android:layout_below="@id/imgline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/btnPlaceOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"
+            android:text="Place Order"
+            android:textAllCaps="false"
+            android:textColor="#ffff"
+            android:textSize="18sp" />
+
+</RelativeLayout>
